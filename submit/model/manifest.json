@@ -1,0 +1,57 @@
+{
+  "validation": {
+    "year": 2024,
+    "logloss": 0.6882830199092691,
+    "auc": 0.5530691628282071,
+    "catboost_weight": 0.75
+  },
+  "iterations": {
+    "catboost": 126,
+    "lightgbm": {
+      "15": 280,
+      "31": 194
+    }
+  },
+  "priors": {
+    "__overall__": 0.4784600415397849,
+    "R": 0.48476157464935155,
+    "F": 0.45513799201503174
+  },
+  "calibration_offsets": {
+    "__overall__": -0.03725459233904492,
+    "R": -0.025389458768371648,
+    "F": -0.030211447916623155
+  },
+  "feature_counts": {
+    "catboost": 118,
+    "lightgbm": 193
+  },
+  "models": {
+    "catboost": [
+      {
+        "file": "catboost_seed426.cbm",
+        "weight": 0.5
+      },
+      {
+        "file": "catboost_seed990.cbm",
+        "weight": 0.5
+      }
+    ],
+    "lightgbm": [
+      {
+        "file": "lightgbm_l15_seed202.txt",
+        "weight": 0.25
+      },
+      {
+        "file": "lightgbm_l31_seed303.txt",
+        "weight": 0.375
+      },
+      {
+        "file": "lightgbm_l31_seed991.txt",
+        "weight": 0.375
+      }
+    ]
+  },
+  "trackman_mappings": 708,
+  "training_seconds": 493.8
+}
