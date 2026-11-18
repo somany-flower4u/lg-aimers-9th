@@ -1,0 +1,10 @@
+{
+  "note": "second probe at the predicted optimum; u measured negative from p006=1142.919",
+  "parent_sha256": "5a027163c50937f29d7278703a74725a9297aa230aa9e75e8c98728dba80d627",
+  "schema_version": 1,
+  "shifts": {
+    "F": 0.0042,
+    "R": 0.0042
+  },
+  "space": "probability"
+}

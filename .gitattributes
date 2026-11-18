@@ -1,0 +1,2 @@
+submit/model/lightgbm_*.txt -text -whitespace
+submit/model_multi/*.txt -text -whitespace

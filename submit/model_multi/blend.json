@@ -1,0 +1,390 @@
+{
+ "blend_weight": 0.2,
+ "calibration_source": "public training data through 2024 only",
+ "league_specialist": {
+  "cst1_command_state_transition_features": 15,
+  "exact_trackman_crosswalk": "exact_tm_v1",
+  "file": "lightgbm_f_specialist.txt",
+  "iterations": 152,
+  "league": "F",
+  "mode": "replace",
+  "note": "does not clear the two-fold rule; 2022 sits inside that fold's seed noise (sd 0.47-0.95) so it reads as no signal rather than negative",
+  "sha256": "7a3fce6b15ba551c79e3c8d6d30f49c96bc92f239620143e209a7a06716b1046",
+  "source": "analysis/train_f_specialist_final.py",
+  "status": "leaderboard experiment, not a validated adoption",
+  "tmt1_trajectory_features": 31,
+  "walk_forward_shipped_form": {
+   "blend": {
+    "2022": 0.11,
+    "2024": 1.59
+   },
+   "replace": {
+    "2022": -0.07,
+    "2024": 4.12
+   }
+  }
+ },
+ "level_policy": "P0_raw; see trackman_candidate.json:level_policy",
+ "lgb15_seed_expansion": {
+  "axis": "lgb15_seed_average",
+  "feature_count": 309,
+  "leaderboard_status": "not_submitted",
+  "parent_score": 1144.363,
+  "reproduction_max_abs": 0.0,
+  "retrained_parent_seed": 202,
+  "rounds": 280,
+  "schema_version": 1,
+  "seeds": [
+   202,
+   203,
+   204,
+   205,
+   206,
+   207,
+   208,
+   209,
+   210
+  ],
+  "selection": "contiguous seeds; no per-seed score selection"
+ },
+ "lgb_slot_policy": "decay_only",
+ "lgb_slot_policy_evidence": {
+  "comparison": "whole slot on the 215-feature decay model vs the shipped half-and-half split",
+  "expected_leaderboard_gain": 0.14,
+  "fold_deltas": {
+   "2022": 0.53,
+   "2024": 0.45
+  },
+  "instrument_haircut": 3.15,
+  "metric": "group-centred discrimination in the shipped composition",
+  "positive_on_both_stable_folds": true,
+  "retrains_models": false,
+  "source": "analysis/run_shipped_form_evaluator.py"
+ },
+ "multi_coefficient": 0.21046974400000004,
+ "multi_members": [
+  {
+   "file": "lgb_multi_seed7.txt",
+   "iterations": 244,
+   "sha256": "abd2453dd9a2f546b5a11a5e7f6422ee9af8b7cb1b3543e92e4272d367186884",
+   "weight": 0.3333333333333333
+  },
+  {
+   "file": "lgb_multi_seed17.txt",
+   "iterations": 293,
+   "sha256": "55dc63095a4397ef7c77d49cc6e4c914fe52111854f05da9959e9051e0e014dd",
+   "weight": 0.3333333333333333
+  },
+  {
+   "file": "lgb_multi_seed29.txt",
+   "iterations": 271,
+   "sha256": "df80f3263508f5c883c487fd37d22a24b219e27f4c369207c1cb66ab2087f5a8",
+   "weight": 0.3333333333333333
+  }
+ ],
+ "multi_shifts": {
+  "F": 0.0,
+  "R": 0.0
+ },
+ "neural_member": {
+  "alpha": 0.14,
+  "alpha_by_group": {
+   "F": 0.07,
+   "R": 0.16
+  },
+  "files": [
+   {
+    "file": "nn_multi_seed11.pkl",
+    "sha256": "e527f7b2c5b0310380109f31641d6e329088a5e27212a210c51e267845023838"
+   },
+   {
+    "file": "nn_multi_seed29.pkl",
+    "sha256": "76de21439488c87bb0f086499d86f78399454c83443de61aec4f4a17b26fdbb9"
+   },
+   {
+    "file": "nn_multi_seed47.pkl",
+    "sha256": "ef6e62f377360df58daa7f814dbe6851ed4f7102ff910f09f598f8fe92bc685e"
+   },
+   {
+    "file": "nn_multi_seed61.pkl",
+    "sha256": "50625b69728577c3851e405a4c018f762233d93c953114386db07959c308c2d8"
+   },
+   {
+    "file": "nn_multi_seed83.pkl",
+    "sha256": "7bbb6e762af4091ff961da960c102f118d8b64bc789cd6b80c33bb538406f610"
+   },
+   {
+    "file": "nn_multi_seed97.pkl",
+    "sha256": "c66f9694afbcccf908c948f38c2d2d5467e64811d78f87436fe7d2e0733026c4"
+   },
+   {
+    "file": "nn_multi_seed113.pkl",
+    "sha256": "98c4ea36d3968102c44f5f4333ba9f9a5e34d57525ced560d1f753a64be0ec62"
+   },
+   {
+    "file": "nn_multi_seed131.pkl",
+    "sha256": "4f2eb80f691fd92508ea5a9ed0d70eeed14f930dc97ada7ff749696e61887498"
+   },
+   {
+    "file": "nn_multi_seed149.pkl",
+    "sha256": "a40ea0684b682f7c9181ac097dca40a41777651470830b08f2b1a8090a871b6c"
+   },
+   {
+    "file": "nn_multi_seed167.pkl",
+    "sha256": "dc58eb148fc36c56b1b4bf007b475a48db482f6bbdccda242a1f28c58446d357"
+   },
+   {
+    "file": "nn_multi_seed181.pkl",
+    "sha256": "ab36df4531e267ae2d9442e4fa61e3d8b6b8937a642ca3a8ed0b60be5b2241c8"
+   },
+   {
+    "file": "nn_multi_seed199.pkl",
+    "sha256": "13cf3dcb1f2e7d43bbb7f1db090f473f8de0ba2346051ca94a17d7c618447fad"
+   },
+   {
+    "file": "nn_multi_seed211.pkl",
+    "sha256": "71442e904bda4138ac95c35e91ba0b4c5e2da43b8e0c58da129a7662ae632777"
+   },
+   {
+    "file": "nn_multi_seed227.pkl",
+    "sha256": "40dbdd5ae268aca62cdc63d9b2cadac79b74bfde9cc57dd5157f767f60040711"
+   },
+   {
+    "file": "nn_multi_seed241.pkl",
+    "sha256": "330740a7adf8e277acb9877ace6da3e8758ced58d271c70be90ce0eb6bdb7f81"
+   },
+   {
+    "file": "nn_multi_seed257.pkl",
+    "sha256": "ff1c83cc5ea721bc48ed0c2394fed2aa702ec28db2166b694f1db75a28280a36"
+   },
+   {
+    "file": "nn_multi_seed263.pkl",
+    "sha256": "0d4d621d22ccb55adea91bc70bec59cd3fd48de9005547eaa57eea643fc1ecb9"
+   },
+   {
+    "file": "nn_multi_seed269.pkl",
+    "sha256": "c1a685fc5031470640b2a513dc579d4297d04c4e233b910f6026398c49306b7d"
+   },
+   {
+    "file": "nn_multi_seed271.pkl",
+    "sha256": "c33b35bf0d475a14b79d26da19c4aec8786e4b3aa2c0b5065f2f1c7ec0c99ede"
+   },
+   {
+    "file": "nn_multi_seed277.pkl",
+    "sha256": "2a2862a065493a488aa5139592a81553386d4b3ba4b942d3357dc636fe10ae4e"
+   },
+   {
+    "file": "nn_multi_seed281.pkl",
+    "sha256": "eee5f9f5b7a9bbfa8d354530a50e1e1335e4a0efcb6366b0f940f8e14822f66f"
+   },
+   {
+    "file": "nn_multi_seed283.pkl",
+    "sha256": "1eae55b07a42b86d04764c4af854a9125b3f6fa273f22f7d5bfb5cea798615d0"
+   },
+   {
+    "file": "nn_multi_seed293.pkl",
+    "sha256": "36ef0d5fca822ff727d3a78def86d5a4601f9ca1e7e42c10781c1ce5e85a8954"
+   },
+   {
+    "file": "nn_multi_seed307.pkl",
+    "sha256": "991abedca63dd28b1cb357b53cb1d328fdbf79128e5e1a95d8d08e0f699c1422"
+   },
+   {
+    "file": "nn_multi_seed311.pkl",
+    "sha256": "b9ee3232819c8ac6ed1eb03c11d3b8eada4bab162e45dca715215195c421ecf4"
+   },
+   {
+    "file": "nn_multi_seed313.pkl",
+    "sha256": "5b05072db96c6526fcc314fe285d843b6cc4951db20e546c67fe6c2472cf441e"
+   },
+   {
+    "file": "nn_multi_seed317.pkl",
+    "sha256": "ddbe84b1cf3db09eba9ed115f013a5afcf1886841fc6d1303f29374d5f40fad0"
+   },
+   {
+    "file": "nn_multi_seed331.pkl",
+    "sha256": "6240d2f94cf21550ba4974e9235290b73b151caecd3a4b1754cce573014a3767"
+   },
+   {
+    "file": "nn_multi_seed337.pkl",
+    "sha256": "393f2b6121c416780dcf1fe4dc01a05f2599fdee857107be3287c822578dc8ae"
+   },
+   {
+    "file": "nn_multi_seed347.pkl",
+    "sha256": "dab8101b47463ab7ce5ce0642e53f87d6eaa000526aefa95638873b9246564bf"
+   },
+   {
+    "file": "nn_multi_seed349.pkl",
+    "sha256": "0c111c9d191b96c0e2af26c0a03647db4bd635853207185c720fc23474b0190f"
+   },
+   {
+    "file": "nn_multi_seed353.pkl",
+    "sha256": "d5596735f5be80608cc5342be23dfe0acc23d551cb9fd6e3d1298d3f31a972c2"
+   },
+   {
+    "file": "nn_multi_seed359.pkl",
+    "sha256": "63d16c0b2f9cc12f2c52049414f68c500508e15005d34626224a7dcc64dbf41a"
+   },
+   {
+    "file": "nn_multi_seed367.pkl",
+    "sha256": "1502160c611214c951b3e0a0e7008a57bf842894209d4c3f0266be05d1354d9c"
+   },
+   {
+    "file": "nn_multi_seed373.pkl",
+    "sha256": "462d8ee5749a49e752b360e87765a2b9c9d4c35e216352d4d72e2068e78a4266"
+   },
+   {
+    "file": "nn_multi_seed379.pkl",
+    "sha256": "d18bf0fb4f87882917368b944f65243d8c847d37f1aa51a5e40613b4b095d45d"
+   },
+   {
+    "file": "nn_multi_seed383.pkl",
+    "sha256": "572df9745fc61de145cb4ca7756e5ceaffc0636b2a3f61a25e5c8d8791f67efe"
+   },
+   {
+    "file": "nn_multi_seed389.pkl",
+    "sha256": "69a9c06ef22a002b41749a7ae5e4624216ce56927d1632987f5a11d30ff9124d"
+   },
+   {
+    "file": "nn_multi_seed397.pkl",
+    "sha256": "5ec877fb40d1da7cd07eb67882513e7af6f0253af5754c39839b8c1328d6c691"
+   },
+   {
+    "file": "nn_multi_seed401.pkl",
+    "sha256": "b75f94eb7937e2cce4c508a8d419898593ed903634aa4c3fa63be78406f2adc7"
+   },
+   {
+    "file": "nn_multi_seed409.pkl",
+    "sha256": "0a6ad397c148c3b4c6a50eee475f5020db28494e04a6f01675e540bb3a03a3a1"
+   },
+   {
+    "file": "nn_multi_seed419.pkl",
+    "sha256": "0af7f7364f9100634e17709e896a3aedea1224807cb9f5aefec572149471a329"
+   },
+   {
+    "file": "nn_multi_seed421.pkl",
+    "sha256": "472686f1f5111ec1cabea1386fe499f0f59c802934d7df1c47d06c739a81b776"
+   },
+   {
+    "file": "nn_multi_seed431.pkl",
+    "sha256": "1b6792103cc6c37a3e8adfea975f6a443cea69e26b9c27c94200042ad8ab0909"
+   },
+   {
+    "file": "nn_multi_seed433.pkl",
+    "sha256": "f5989b5e810f20a4f9da0ce24dbff4afcdcefb21da00a59e4b7f5147a34004fa"
+   },
+   {
+    "file": "nn_multi_seed439.pkl",
+    "sha256": "8ae40d415ed0c5ee0e1877697a46098b10699817d58a533741faa469113aab9e"
+   },
+   {
+    "file": "nn_multi_seed443.pkl",
+    "sha256": "c77834e93eda922012660bbda322a8f43ca902592931b0b4acff1393616fae10"
+   },
+   {
+    "file": "nn_multi_seed449.pkl",
+    "sha256": "436b25805f11d80bdebe986a9b9b0b2d48d7b83e2171bb21eb6759d1385c4bdc"
+   },
+   {
+    "file": "nn_multi_seed457.pkl",
+    "sha256": "8bc4813b35ee6a3459cdbbaee6201ee7d38af7153c361cc4837c281836613051"
+   },
+   {
+    "file": "nn_multi_seed461.pkl",
+    "sha256": "9e7da832eed82911c67d5bf9743d38daee2b3f4d6f7438983d948e7b961ce4fa"
+   },
+   {
+    "file": "nn_multi_seed463.pkl",
+    "sha256": "f481f5146a6556710608f7baf36558c764cee74cbc3767036c302e6b338dd17b"
+   },
+   {
+    "file": "nn_multi_seed467.pkl",
+    "sha256": "85b6ffe6b8545a2714edac24c5ab5827f505536879476e38bfdf2affa08d6459"
+   },
+   {
+    "file": "nn_multi_seed479.pkl",
+    "sha256": "ab73a7833d5c1861bfbe1da4ae940e042a01a3d7531d315fa38bcbfe7230142c"
+   },
+   {
+    "file": "nn_multi_seed487.pkl",
+    "sha256": "ee0c7cfd6b91835136da7e9498f4b11ff01a3d525abf5e7e43ab3923554c7068"
+   },
+   {
+    "file": "nn_multi_seed491.pkl",
+    "sha256": "75219c47cf9eccd50fddc8dd11f7811aa2f71420dbed6c3419dd0320a330c5cb"
+   },
+   {
+    "file": "nn_multi_seed499.pkl",
+    "sha256": "4fe2a59cac74287a75e7f9e55cb72d5e24eef4a5693a4b41683b4ef44bfb83c2"
+   },
+   {
+    "file": "nn_multi_seed503.pkl",
+    "sha256": "c318abbda6f266d41bdacba4705d4984a487854ed807598dacccc81aae1fc382"
+   },
+   {
+    "file": "nn_multi_seed509.pkl",
+    "sha256": "8f8dcc99af1ff4b32843f364a5b4f3463f126f1847af921262ec8b29ada0a9fa"
+   },
+   {
+    "file": "nn_multi_seed521.pkl",
+    "sha256": "257ae329792d85a7e149736c924a01f894c2e6edf88e2e367caecdecacbd6925"
+   },
+   {
+    "file": "nn_multi_seed523.pkl",
+    "sha256": "21208722c7171f05a4a065ece22166386f250462d1abcca53ccbafe935968b99"
+   },
+   {
+    "file": "nn_multi_seed541.pkl",
+    "sha256": "887138a393381add9f74b6e9692c33b71a18270024289bc5035d6c99876daba6"
+   },
+   {
+    "file": "nn_multi_seed547.pkl",
+    "sha256": "97432450afe14a8e208610aa368f41484e8e90553f0eedc1797b22731eb48bf0"
+   },
+   {
+    "file": "nn_multi_seed557.pkl",
+    "sha256": "b3f9d7f77473e21dab958ba7bb35dce11b55816d3691203187c76547ff59a421"
+   },
+   {
+    "file": "nn_multi_seed563.pkl",
+    "sha256": "aafe203a50958843a7a0739395ba07c4ef8314187982f9d2f11580edb73f3a14"
+   }
+  ],
+  "mode": "logit_deviation",
+  "status": "entity-embedding member, 12 epochs / embedding 32 / dropout 0.15, sixteen seeds averaged.  Schedule chosen on 2022 by blend gain (interior maximum); verified on 2024.  Alpha comes from the leaderboard: 0.05, 0.08 and 0.12 measured +19.378, +26.928 and +32.278, and a quadratic through them fits to +/-0.006 points with an optimum at 0.1395 for eight seeds.  Sixteen seeds lift the holdout peak from +14.026 to +15.266 and move the fitted optimum to 0.148; 0.14 sits 0.09 points below that peak and close to the optimum measured directly, so it leans on the extrapolation as little as possible.  Per-league weights: the member is worth much less on Futures rows -- best holdout weight 0.05 there against 0.11 on Regular, where a single weight optimises at 0.10.  Applying that ratio around the leaderboard-measured optimum of 0.145 gives R 0.16 and F 0.07, worth +0.973 on the holdout (+16.151 against +15.178).  Evidence: analysis/nn_member_tuning.md"
+ },
+ "oof_promotion": {
+  "fold_gains": {
+   "2022": 10.638690162434614,
+   "2023": 20.842324598247046,
+   "2024": 14.940533335761074
+  },
+  "metric": "group-centered discrimination gain at fixed binary weight 0.2",
+  "minimum_fold_gain": 10.0,
+  "source_commit": "9fc5939e096c9910397dcd9651026101997aeee2"
+ },
+ "original_multi_shifts": {
+  "F": -0.04605297056741703,
+  "R": -0.023246604028324867
+ },
+ "original_stack_coefficients": {
+  "catboost": 0.24437975,
+  "catboost_decay_classifier": 0.24437975,
+  "catboost_decay_regressor": 0.24437975,
+  "lgb15": 0.09498236,
+  "lgb31": 0.112113555,
+  "lgb_decay": 0.112113555
+ },
+ "schema_version": 2,
+ "seed_merge": {
+  "catboost_models": 153,
+  "neural_members": 64,
+  "rationale": "seed averaging is an identity: Brier(mean of k) = Brier(1) - (1 - 1/k) * s^2. The bundle changed only CatBoost and the neural member; TMT-1 and CST-1 changed only LightGBM; the level shift is a scalar. The CatBoost and multiclass contracts are asserted identical in this build.",
+  "retrained": 0,
+  "source": "submissions/submit_seed_bundle.zip",
+  "source_leaderboard": 1137.279,
+  "source_measured_delta": 0.256,
+  "source_parent_leaderboard": 1137.023
+ },
+ "stack_scale": 0.8
+}

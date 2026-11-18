@@ -1,0 +1,411 @@
+{
+ "affected_component": "lgb31",
+ "candidate_model_sha256": {
+  "model/lightgbm_l31_seed303.txt": "3c670dab33de38e23e5b48ae92819fdb92dd8639194c37646ed5d0a42ed20dfd",
+  "model/lightgbm_l31_seed991.txt": "1b64914b2525645c0fafaf0e99ab3a1535ddb84565ca76ef799f67ac6bea0fa6"
+ },
+ "counts": {
+  "aligned_rows_with_accepted_pitcher": 769478,
+  "mapping_count": 700,
+  "mapping_retained": 700
+ },
+ "cst1_command_state_transition": {
+  "baseline_leaderboard_score_from_user": 1137.21,
+  "baseline_zip_sha256": "181c31e0f1407ef1c0ea7aa59c67943bccc11ef535e23e6a445bbcf42724fce1",
+  "command_rate_columns": [
+   "asof_pitcher_reverse_rate",
+   "asof_pitcher_middle_rate",
+   "asof_pitcher_ball_rate",
+   "asof_pitcher_strike_rate"
+  ],
+  "current_pitch_features": 0,
+  "definition": "official row-wise current-season cumulative state minus the pitcher's frozen previous-season command and pitch-mix profile",
+  "evaluation_row_aggregation": false,
+  "feature_columns": [
+   "cst_prev_reverse_rate",
+   "cst_prev_middle_rate",
+   "cst_prev_ball_rate",
+   "cst_prev_strike_rate",
+   "cst_reverse_delta_shr75",
+   "cst_middle_delta_shr75",
+   "cst_ball_delta_shr75",
+   "cst_strike_delta_shr75",
+   "cst_prev_fastball_rate",
+   "cst_prev_breaking_rate",
+   "cst_prev_offspeed_rate",
+   "cst_fastball_offspeed_logratio_delta_shr75",
+   "cst_breaking_offspeed_logratio_delta_shr75",
+   "cst_command_drift_l2_shr75",
+   "cst_pitchmix_hellinger_shr75"
+  ],
+  "feature_contract": {
+   "base_features": 309,
+   "command_state_transition_features": 15,
+   "current_pitch_features": 0,
+   "decay_features": 331,
+   "evaluation_row_aggregation": false,
+   "f_specialist_rows": 161004,
+   "parent_base_features": 294,
+   "parent_decay_features": 316,
+   "previous_season": 2024,
+   "shrinkage_count": 75.0,
+   "target_year": 2025
+  },
+  "local_performance_score_computed": false,
+  "mix_rate_columns": [
+   "asof_pitcher_fastball_rate",
+   "asof_pitcher_breaking_rate",
+   "asof_pitcher_offspeed_rate"
+  ],
+  "model_sha256": {
+   "lightgbm_decay_l31_seed145.txt": "67ee624f7e4580484b0ec1e07b47744f9865fee09069635bed5927321e764e31",
+   "lightgbm_decay_l31_seed2001.txt": "f60f30aa7eed676120ec0622c8576f25ceaf98bc08fbfb50c49756500773709d",
+   "lightgbm_decay_l31_seed2002.txt": "83a94863ed2702b90c78e536f5c40f7afa8430926e2d4b22c975ee64ad80495b",
+   "lightgbm_decay_l31_seed2003.txt": "150717fbb84427ec930bd075ba0f886408e9a3b5c7287bc1f0329204846cbea9",
+   "lightgbm_decay_l31_seed2004.txt": "26c4d6cdd2f44c698faab4be0ebc5d85bc46edde2c175d4a3348e924574cc109",
+   "lightgbm_decay_l31_seed2005.txt": "9daa3ed541fd8c31077b4401f42396cbdf3409ffc68b452a1cfe02f3208b56bc",
+   "lightgbm_decay_l31_seed2006.txt": "362dd0323af4b2a4f25a0ceb06ae4c8a80c1a042675dc5332f37975c47de28c5",
+   "lightgbm_decay_l31_seed2007.txt": "1fc469a3b0979199058e7500876d2926b546e90d878b73d50ee0fc44ce25b909",
+   "lightgbm_decay_l31_seed2008.txt": "08634a051b70bb8703b4ee2692db8deaa999c44724196dab1dcfbb808d1534b3",
+   "lightgbm_decay_l31_seed2009.txt": "220e8c0342fcfac2d93b39570d26352e6993054419488d2f3b82aa6cb8426c82",
+   "lightgbm_decay_l31_seed2010.txt": "1715fd745cb5749c89d3a04b339d745e5346e5e27b582a831921d7a015909c11",
+   "lightgbm_decay_l31_seed277.txt": "60363a79201fe1509b1939d9b73806b68c3f8918467b49af903bcbc956093548",
+   "lightgbm_decay_l31_seed303.txt": "9390e8b4cb083b5beb26091e935d2e01e05610d89a1ca68791e6b38bfdbe266a",
+   "lightgbm_decay_l31_seed419.txt": "7b5f8b60cc7525a3d911a9693a148f2fc2bc85916dfe345118072890a2389e4c",
+   "lightgbm_decay_l31_seed991.txt": "c87a0a90f4306b3ebffbc38c2f306819c7ab5a4529a0b0d7570ad91a74076bbc",
+   "lightgbm_f_specialist.txt": "7a3fce6b15ba551c79e3c8d6d30f49c96bc92f239620143e209a7a06716b1046",
+   "lightgbm_l15_seed202.txt": "aaad461b0fc959381086566020495e9a6d3a8ac5b781360f7523c1b5b54a87e1",
+   "lightgbm_l31_seed303.txt": "3c670dab33de38e23e5b48ae92819fdb92dd8639194c37646ed5d0a42ed20dfd",
+   "lightgbm_l31_seed991.txt": "1b64914b2525645c0fafaf0e99ab3a1535ddb84565ca76ef799f67ac6bea0fa6"
+  },
+  "name": "CST-1 pitcher command state transition",
+  "phase_seconds": {
+   "data_load": 9.920356874994468,
+   "f_specialist_training": 8.622607874975074,
+   "feature_build": 22.84480829106178,
+   "lgb15_training": 59.087343999999575,
+   "lgb31_training": 94.87713804200757,
+   "lgb_decay_training": 1028.1822846659925,
+   "main_feature_build": 16.12438650004333,
+   "trackman_feature_build": 6.7204217910184525
+  },
+  "retrained_models": [
+   "lightgbm_decay_l31_seed145.txt",
+   "lightgbm_decay_l31_seed2001.txt",
+   "lightgbm_decay_l31_seed2002.txt",
+   "lightgbm_decay_l31_seed2003.txt",
+   "lightgbm_decay_l31_seed2004.txt",
+   "lightgbm_decay_l31_seed2005.txt",
+   "lightgbm_decay_l31_seed2006.txt",
+   "lightgbm_decay_l31_seed2007.txt",
+   "lightgbm_decay_l31_seed2008.txt",
+   "lightgbm_decay_l31_seed2009.txt",
+   "lightgbm_decay_l31_seed2010.txt",
+   "lightgbm_decay_l31_seed277.txt",
+   "lightgbm_decay_l31_seed303.txt",
+   "lightgbm_decay_l31_seed419.txt",
+   "lightgbm_decay_l31_seed991.txt",
+   "lightgbm_f_specialist.txt",
+   "lightgbm_l15_seed202.txt",
+   "lightgbm_l31_seed303.txt",
+   "lightgbm_l31_seed991.txt"
+  ],
+  "selection": "leaderboard_only",
+  "status": "candidate_built_not_submitted"
+ },
+ "exact_trackman_v1": {
+  "diagnostics": {
+   "aligned_main_row_share": 0.5246140579706214,
+   "aligned_rows": 773854,
+   "batter": {
+    "accepted_entities": 727,
+    "candidate_entities": 735,
+    "minimum_evidence_rows": 1,
+    "minimum_purity": 0.99,
+    "purity_ge_0_99": 727,
+    "reverse_collisions": 0,
+    "unique_trackman_entities": 727
+   },
+   "exact_matched_games": 2575,
+   "main_games": 4868,
+   "main_rows": 1475092,
+   "pitcher": {
+    "accepted_entities": 700,
+    "candidate_entities": 702,
+    "minimum_evidence_rows": 1,
+    "minimum_purity": 0.99,
+    "purity_ge_0_99": 700,
+    "reverse_collisions": 0,
+    "unique_trackman_entities": 700
+   },
+   "signature": "unique season + opening game_month + opening game_dayofweek + row count + SHA256 of complete ordered pre-pitch baseball states",
+   "state_columns": [
+    "inning",
+    "top_bottom_code",
+    "balls_before",
+    "strikes_before",
+    "outs_before",
+    "pitcher_hand_code",
+    "batter_hand_code"
+   ],
+   "trackman_games": 5982,
+   "trackman_rows": 1793077,
+   "trackman_rows_excluded_non_game": 1,
+   "uses_test_rows": false
+  },
+  "local_performance_score_computed": false,
+  "minimum_evidence_rows": 1,
+  "minimum_purity": 0.99,
+  "retrained_models": [
+   "lightgbm_decay_l31_seed145.txt",
+   "lightgbm_decay_l31_seed2001.txt",
+   "lightgbm_decay_l31_seed2002.txt",
+   "lightgbm_decay_l31_seed2003.txt",
+   "lightgbm_decay_l31_seed2004.txt",
+   "lightgbm_decay_l31_seed2005.txt",
+   "lightgbm_decay_l31_seed2006.txt",
+   "lightgbm_decay_l31_seed2007.txt",
+   "lightgbm_decay_l31_seed2008.txt",
+   "lightgbm_decay_l31_seed2009.txt",
+   "lightgbm_decay_l31_seed2010.txt",
+   "lightgbm_decay_l31_seed277.txt",
+   "lightgbm_decay_l31_seed303.txt",
+   "lightgbm_decay_l31_seed419.txt",
+   "lightgbm_decay_l31_seed991.txt",
+   "lightgbm_f_specialist.txt",
+   "lightgbm_l15_seed202.txt",
+   "lightgbm_l31_seed303.txt",
+   "lightgbm_l31_seed991.txt"
+  ],
+  "selection": "leaderboard_only_not_yet_submitted"
+ },
+ "gate": {
+  "margin_gt": 0.0,
+  "overlap_ge": 1.0,
+  "score_lt": 2.0
+ },
+ "iterations": 184,
+ "level_policy": {
+  "action": "zero_component_calibration_offsets",
+  "decision_rule": "beat the incumbent on both 2022 and 2024, then maximise the minimum of the two; 2023 excluded (early stopping unusable); oracle reported but not selectable",
+  "derived_from": "official train.csv walk-forward folds only",
+  "evidence": [
+   "analysis/run_level_policy_backtest.py",
+   "analysis/level_policy_backtest.json",
+   "analysis/measure_level_forcing.py",
+   "analysis/level_forcing_measurement.json"
+  ],
+  "free_parameters": 0,
+  "incumbent": "P3_trend",
+  "measured_effect": {
+   "mean_probability_shift": 0.0062191314721022906,
+   "note": "the removal is a per-game_type constant in logit space to within 5.5e-05, so group-centred discrimination is unchanged",
+   "per_group_logit_shift": {
+    "F": 0.034189091839530936,
+    "R": 0.023837320983524087
+   },
+   "per_group_logit_shift_sd": {
+    "F": 5.458059405453535e-05,
+    "R": 1.5640624255408748e-05
+   },
+   "rows": 39872
+  },
+  "name": "P0_raw",
+  "stable_fold_scores": {
+   "P0_raw": {
+    "2022": 2453.56,
+    "2024": 802.86
+   },
+   "P1_persistence": {
+    "2022": 2435.09,
+    "2024": 799.12
+   },
+   "P2_pool": {
+    "2022": 2124.31,
+    "2024": -915.09
+   },
+   "P3_trend": {
+    "2022": 2365.66,
+    "2024": 561.11
+   },
+   "P4_insample_ref": {
+    "2022": NaN,
+    "2024": 811.25
+   },
+   "P_ORACLE_not_selectable": {
+    "2022": 2465.63,
+    "2024": 871.63
+   }
+  },
+  "summary": "Ship the model's own output level. Do not force any component's prediction mean onto a historical aggregate or a trend forecast.",
+  "uses_evaluation_data": false,
+  "uses_leaderboard_feedback": false,
+  "verdict": "ADOPT",
+  "zeroed": [
+   "meta.pkl component_calibration_offsets (all six components)",
+   "trackman_candidate.json lgb31_calibration_offsets (kept below as provenance)",
+   "model_multi/blend.json multi_shifts"
+  ]
+ },
+ "lgb15_seed_expansion": {
+  "axis": "lgb15_seed_average",
+  "feature_count": 309,
+  "leaderboard_status": "not_submitted",
+  "parent_score": 1144.363,
+  "reproduction_max_abs": 0.0,
+  "retrained_parent_seed": 202,
+  "rounds": 280,
+  "schema_version": 1,
+  "seeds": [
+   202,
+   203,
+   204,
+   205,
+   206,
+   207,
+   208,
+   209,
+   210
+  ],
+  "selection": "contiguous seeds; no per-seed score selection"
+ },
+ "lgb31_calibration_offsets": {
+  "F": -0.03931184508515975,
+  "R": -0.024174224249152297,
+  "__overall__": -0.037614606104965226
+ },
+ "meta_sha256": {
+  "model/meta.pkl": "f9192db2fc9b310cc72940dfffe1defd07959ca8d0bcde59891e8f3a3deaa4a3",
+  "model_multi/meta.pkl": "9533fddecaf457f7c80065e25bf2c6bcf6e32ee6b87be524e08396705678331b"
+ },
+ "oof_evidence": {
+  "component": "base LGB31 seed303+991 ensemble",
+  "folds": {
+   "2022": 3.864269929626518e-06,
+   "2023": -5.107092460043816e-08,
+   "2024": 5.3192968480497704e-06
+  },
+  "metric": "Brier gain, positive is better"
+ },
+ "original_lgb31_calibration_offsets": {
+  "F": -0.03902270540205288,
+  "R": -0.024333890219158077,
+  "__overall__": -0.03772166098478211
+ },
+ "original_model_sha256": {
+  "model/lightgbm_l31_seed303.txt": "7fdd7cad86e6b86184c157df564273dc255b06c648d543ecf582a30bb6c52f55",
+  "model/lightgbm_l31_seed991.txt": "0ad287bef97523618b3b85f63a6968fdee30a4a1dfe1ac2a1fd93b3c9eb85c68"
+ },
+ "rule_compliance": {
+  "evaluation_row_aggregation": false,
+  "leaderboard_derived_adjustment": false,
+  "trackman_years": [
+   2019,
+   2020,
+   2021,
+   2022,
+   2023,
+   2024
+  ]
+ },
+ "schema_version": 1,
+ "seed_merge": {
+  "catboost_models": 153,
+  "neural_members": 64,
+  "rationale": "seed averaging is an identity: Brier(mean of k) = Brier(1) - (1 - 1/k) * s^2. The bundle changed only CatBoost and the neural member; TMT-1 and CST-1 changed only LightGBM; the level shift is a scalar. The CatBoost and multiclass contracts are asserted identical in this build.",
+  "retrained": 0,
+  "source": "submissions/submit_seed_bundle.zip",
+  "source_leaderboard": 1137.279,
+  "source_measured_delta": 0.256,
+  "source_parent_leaderboard": 1137.023
+ },
+ "source_zip_sha256": "181c31e0f1407ef1c0ea7aa59c67943bccc11ef535e23e6a445bbcf42724fce1",
+ "tmt1_trajectory": {
+  "baseline_zip_sha256": "bbe7211261ce5e335ef5cd91ba055c6fe15b49951699b72646a1421adf6168a5",
+  "current_pitch_features": 0,
+  "definition": "latest observed TrackMan season minus strictly earlier career",
+  "evaluation_row_aggregation": false,
+  "feature_contract": {
+   "base_features": 294,
+   "cutoff_year": 2024,
+   "decay_features": 316,
+   "f_specialist_rows": 161004,
+   "parent_base_features": 263,
+   "parent_decay_features": 285,
+   "pitcher_mapping_rows": 700,
+   "temporal_features": 31
+  },
+  "groups": [
+   "fastball",
+   "breaking",
+   "offspeed"
+  ],
+  "local_performance_score_computed": false,
+  "measures": [
+   "rel_speed",
+   "spin_rate",
+   "induced_vert_break",
+   "horz_break",
+   "extension",
+   "rel_height",
+   "rel_side",
+   "zone_speed"
+  ],
+  "model_sha256": {
+   "lightgbm_decay_l31_seed145.txt": "f80bc12a4ccea31310e72ceb142e46730290d504e472339b5aa270f4e537e4f4",
+   "lightgbm_decay_l31_seed2001.txt": "b49940ac52fd4cc29ca66d97eee71916ad53b56b90cadd5d5de5ab91febcca77",
+   "lightgbm_decay_l31_seed2002.txt": "d9c8fafdab33f32989614bb55c3410dba175d33d1835094dbc2abe11fe0d00ef",
+   "lightgbm_decay_l31_seed2003.txt": "3d62dbba15bf217e865412a2f1c457b768c891a1d64d706357fea419bb7340b3",
+   "lightgbm_decay_l31_seed2004.txt": "66d4d7b6f7ddb28143ad990737020f87fa02d50d64375bb1de5aded1af590a29",
+   "lightgbm_decay_l31_seed2005.txt": "ae96170b0d5607c64b1933241cf51d77ef2899f85ac1bc9dfd67d76dea678315",
+   "lightgbm_decay_l31_seed2006.txt": "ea7135573a91e158936b4c6675e7396114c113110e1316684360eb7220b4e636",
+   "lightgbm_decay_l31_seed2007.txt": "b805da226094eb8700b73204e77ab6bb641eed4e770fb744a979b434156e1b87",
+   "lightgbm_decay_l31_seed2008.txt": "e26902ee2dedd6ab73767d113def3736809ba4a35d67ea5caf6c5ccaeb83620b",
+   "lightgbm_decay_l31_seed2009.txt": "ae0ccc368da962a3d1b13b2f3179c86aca644c645d3b9b7c9e74e21b53075ac2",
+   "lightgbm_decay_l31_seed2010.txt": "d225eb1128d6e3af5f6be9bbe1123a624621b7f11d41ba9734b692ee8ccb9b91",
+   "lightgbm_decay_l31_seed277.txt": "b2137207c675f388dd04adae26d6c59cd4a8c252f9a6154062e928cfb86b7cfa",
+   "lightgbm_decay_l31_seed303.txt": "65bf37b27208fb719ef7faf1b172973f8a35e008da7f302dc81021ee16291dad",
+   "lightgbm_decay_l31_seed419.txt": "f779cff46b44e6fee50a6f8e84bfce0cea5bef7ec79da2f9b46b0c8e509ba5eb",
+   "lightgbm_decay_l31_seed991.txt": "20944feafe0251dce62070e78f0721003fd69b42b517248ca89c3ed0241b11bc",
+   "lightgbm_f_specialist.txt": "1a4922a056d4629975921656d195bb5307e71191582a90571615aff07b5ff365",
+   "lightgbm_l15_seed202.txt": "ddb6b4a40ac429e0c5bb29d2969f992fe51332dceccb2a2b7bf2c8aa9781de39",
+   "lightgbm_l31_seed303.txt": "31d801e87d9a08ae3f02874c2e8be77da4f0ea0923d533a91f1de512d6ea2dd4",
+   "lightgbm_l31_seed991.txt": "9990416bd8d6b8e1dcaaaf6dcf8d7680bbe8f5807a881ed7980c7d382c8f1395"
+  },
+  "name": "TMT-1 temporal physical trajectory",
+  "phase_seconds": {
+   "data_load": 8.901762833003886,
+   "f_specialist_training": 8.518703625013586,
+   "feature_build": 17.011726167052984,
+   "lgb15_training": 55.89362391701434,
+   "lgb31_training": 71.45272216701414,
+   "lgb_decay_training": 904.2375742080039,
+   "main_feature_build": 11.006786000041757,
+   "trackman_feature_build": 6.0049401670112275
+  },
+  "retrained_models": [
+   "lightgbm_decay_l31_seed145.txt",
+   "lightgbm_decay_l31_seed2001.txt",
+   "lightgbm_decay_l31_seed2002.txt",
+   "lightgbm_decay_l31_seed2003.txt",
+   "lightgbm_decay_l31_seed2004.txt",
+   "lightgbm_decay_l31_seed2005.txt",
+   "lightgbm_decay_l31_seed2006.txt",
+   "lightgbm_decay_l31_seed2007.txt",
+   "lightgbm_decay_l31_seed2008.txt",
+   "lightgbm_decay_l31_seed2009.txt",
+   "lightgbm_decay_l31_seed2010.txt",
+   "lightgbm_decay_l31_seed277.txt",
+   "lightgbm_decay_l31_seed303.txt",
+   "lightgbm_decay_l31_seed419.txt",
+   "lightgbm_decay_l31_seed991.txt",
+   "lightgbm_f_specialist.txt",
+   "lightgbm_l15_seed202.txt",
+   "lightgbm_l31_seed303.txt",
+   "lightgbm_l31_seed991.txt"
+  ],
+  "season_normalization": "TrackMan season by pitch_type_group",
+  "selection": "leaderboard_only",
+  "status": "candidate_built_not_submitted"
+ }
+}

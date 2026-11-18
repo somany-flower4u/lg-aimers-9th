@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "name": "count_segment_specialist",
+  "space": "logit",
+  "column": "strikes_before",
+  "strikes_before": 2,
+  "exclude_balls": [
+    3
+  ],
+  "weight": 0.2,
+  "contract": "shipped 331-column decay matrix",
+  "hyperparameters": {
+    "leaves": 63,
+    "min_data_in_leaf": 200,
+    "rounds": 440,
+    "learning_rate": 0.03,
+    "seeds": [
+      11,
+      29,
+      47,
+      61,
+      83
+    ]
+  },
+  "fit_rows": 348581,
+  "fit_seasons": "every official training season",
+  "uses_test_rows": false,
+  "uses_2025_trackman": false,
+  "evaluation_row_aggregation": false,
+  "leaderboard_derived": false,
+  "selection": {
+    "weight_chosen_on": [
+      2022,
+      2024
+    ],
+    "excluded_fold": 2023,
+    "excluded_because": "early stopping leaves 20-40 trees; unusable for gating",
+    "raw_deployment_form_uB_in_segment_all_two_strike": {
+      "2022": 66.1,
+      "2024": 51.75
+    },
+    "per_count_uB": {
+      "0-2": {
+        "2022": 55.01,
+        "2024": 69.94
+      },
+      "1-2": {
+        "2022": 113.19,
+        "2024": 108.81
+      },
+      "2-2": {
+        "2022": 113.29,
+        "2024": 37.61
+      },
+      "3-2": {
+        "2022": -94.86,
+        "2024": -66.71
+      }
+    },
+    "leaderboard_points_excluding_3_2": {
+      "2022": 9.44,
+      "2024": 7.2
+    },
+    "hyperparameters_selected_on": 2022,
+    "hyperparameters_verified_once_on": 2024,
+    "tuned_vs_shipped_defaults_on_2024": {
+      "tuned_uB": 91.73,
+      "default_uB": 86.15,
+      "tuned_points": 8.86,
+      "default_points": 8.32
+    },
+    "note": "blend gain tracks decorrelation, not standalone quality: the best standalone config scored +87.11 uB on 2022 while the adopted one, worse standalone, scored +96.27 at correlation 0.889",
+    "level_and_sharpness_normalised_uB_in_segment": {
+      "2022": 45.16,
+      "2024": 14.14
+    },
+    "control": "reconstructed deployment blend: control_logit + alpha_by_group * neural"
+  },
+  "files": [
+    {
+      "file": "lightgbm_strike_s2x3_specialist_seed11.txt",
+      "sha256": "6c318095b1613829538479a8a6f1453741756fe9c441b27036edc5cb9f9c2de9"
+    },
+    {
+      "file": "lightgbm_strike_s2x3_specialist_seed29.txt",
+      "sha256": "9b8b51cf36a1ac749228cba12ebf831cb63f381b959278643b50aad25294a92e"
+    },
+    {
+      "file": "lightgbm_strike_s2x3_specialist_seed47.txt",
+      "sha256": "2214a7b5f8f6433249d207b88f118eedc8f521f6acdbabc974b4cb8deee68fe9"
+    },
+    {
+      "file": "lightgbm_strike_s2x3_specialist_seed61.txt",
+      "sha256": "6d454261f9641b32a35fe36c221e644b14dfdccc4e9df0b02b2dc47aa3e3ea5d"
+    },
+    {
+      "file": "lightgbm_strike_s2x3_specialist_seed83.txt",
+      "sha256": "ae196d6b4b7a5b8b1d465ac3ddd09bb1588fe4c92511b423abf3454ff6b03afc"
+    }
+  ]
+}

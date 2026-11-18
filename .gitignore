@@ -5,6 +5,24 @@ __pycache__/
 
 offer/*
 
+# Candidate submission archives (rebuilt deterministically from submit/ by
+# analysis/build_submission_zip.py; see submissions/README.md)
+submissions/*.zip
+
+# The champion archive itself, from 1144.363 on.  The seed merge took it to
+# 189.8 MB, past GitHub's hard 100 MB per-file limit, while every file inside
+# submit/ is at most 1.77 MB and pushes fine.  The tree is the source of truth
+# and the archive is derived: analysis/rebuild_submit_zip.py reproduces it BYTE
+# FOR BYTE from submit/ plus analysis/submit_zip_manifest.json, and verifies its
+# own output against the recorded sha256.
+submit.zip
+
+# Local rolling-OOF prediction caches (regenerable from analysis scripts)
+analysis/stash_multiclass_seed*_*.npz
+analysis/stash_multiclass_catboost_*.npz
+analysis/multiclass_prodfeat_*.npz
+analysis/catboost_tm_*.npy
+
 # C extensions
 *.so
 
@@ -218,3 +236,14 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Training artifact trees (multi-GB; rebuilt by the analysis builders)
+artifacts/
+
+# Regenerable prediction caches from the screens
+analysis/native_categorical_multiclass_results/result_predictions.npz
+analysis/pitch_group/*.npz
+
+.DS_Store
+output/
+submit/data/
